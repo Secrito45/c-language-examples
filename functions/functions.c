@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 static inline void test(void)
 {
     int i = 0;
@@ -14,11 +16,24 @@ static void test_2(void)
     j++;
 }
 
+struct test_values
+{
+    int age;
+    char name[32];
+};
+
+void print_test_values(struct test_values val)
+{
+    printf("User name is: %s, %d years old.\n", val.name, val.age);
+}
+
 int main(void)
 { 
-    test();
+    struct test_values test_val = {45, "Jane"};
+    
+    print_test_values(test_val);
 
-    test_2();
+    print_test_values((struct test_values){106, "Adolf"});
 
     return 0;
 }

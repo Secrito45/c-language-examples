@@ -36,3 +36,5 @@ help:
 	@echo "          HOW TO USE"
 	@echo "---------------------------------"
 	@echo "Run:	make TARGET=<target name>"
+	@echo ""
+	@echo "Where <target name> is one of the sub folders."

@@ -11,7 +11,7 @@
     THREE
 };*/
 
-void foo()
+void foo(void)
 {
     //unsigned char word = 'S';
     //unsigned int testData = (word & 0x000000ff) | 0x10000000;
@@ -23,7 +23,7 @@ void foo()
     //printf("Hello Data");
 }
 
-void bar()
+void bar(void)
 {
     __uint8_t array[] = {0xa5, 0xff};
     __uint16_t data = (array[0] << 8) | (array[1]);
@@ -31,7 +31,7 @@ void bar()
     printf("Testa data: 0x%08x \n", data);  
 }
 
-void multiply_or_devide_value_with_power_of_two(void)
+void multiply_or_divide_value_with_power_of_two(void)
 {
     unsigned long val = 10;
 
@@ -44,12 +44,29 @@ void multiply_or_devide_value_with_power_of_two(void)
     printf("val is %ld\n", val);
 }
 
-int main(void) 
+void and_operator(void)
 {
     unsigned char reg = 0b01001000;
     unsigned char flag= 0b00001000;
     printf("0x%02x \n", reg);
     printf("0x%02x \n", flag);
     printf("0x%02x \n", (reg & flag));
+}
+
+void bitshift_operators(void)
+{
+    printf("Value of (1 << 16) => %d\n", (1 << 16));
+}
+
+
+void xor_operator(void)
+{
+    printf("(2 ^ 16) => %d\n", (2 ^ 16));
+}
+
+int main(void) 
+{
+    //bitshift_operators();
+    xor_operator();
     return 0;
 }
