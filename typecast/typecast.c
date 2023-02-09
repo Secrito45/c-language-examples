@@ -29,11 +29,22 @@ void float_cast_to_integer(int float_as_int, float original_float)
     }
 }
 
+void division_of_integers(void)
+{
+    int value = 289348;
+    const int constant = 32768;
+
+    printf("Not like this!: %.2f\n", (value / constant));
+    printf("Little bit better: %.2f\n", (float)(value / constant));
+    printf("This is the correct solution: %.2f\n", ((float) value / constant));
+}
+
 int main(void)
 {
-    float some_float_value = 0.1234;
+    //float some_float_value = 0.1234;
+    //float_cast_to_integer(some_float_value, some_float_value);
 
-    float_cast_to_integer(some_float_value, some_float_value);
+    division_of_integers();
 
     return 0;
 }
