@@ -1,1 +1,3 @@
+# Ignore test files
 test/
+test*.*
